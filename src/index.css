@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+* {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    /* color: #666; */
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+}
+
+
+
+.colors {
+    color: pink;
+    color: #FF007F;
+    color: #CC0066;
+    color: #f70767;
+
+}
+
+.custom-toast-success {
+    background-color: #f70767 !important;  /* Success background */
+    color: #FFFFFF !important;             /* Text color */
+}
+
+.custom-toast-error {
+    background-color: #ff1100 !important;  /* Error background */
+    color: #FFFFFF !important;             /* Text color */
+}
+
+/* Make the check icon white */
+.custom-toast-success .Toastify__toast-icon svg {
+    fill: #FFFFFF !important;
+}
+
+/* Make the error icon white */
+.custom-toast-error .Toastify__toast-icon svg {
+    fill: #FFFFFF !important;
+}
