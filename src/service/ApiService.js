@@ -2,13 +2,21 @@ import axios from "axios";
 
 export default class ApiService {
 
-    static BOOKING_BASE_URL = "http://localhost:4050/api"
-    static USER_BASE_URL = "http://localhost:4070/api"
-    static ROOM_BASE_URL = "http://localhost:4060/api"
+    static isLocalhost() {
+        return window.location.hostname === 'localhost';
+    }
 
-    // static USER_BASE_URL= "http://13.53.197.160:4070/api"
-    // static BOOKING_BASE_URL= "http://16.16.207.162:4050/api"
-    // static ROOM_BASE_URL= "http://16.171.15.21:4060/api"
+    static BOOKING_BASE_URL = ApiService.isLocalhost() 
+        ? "http://localhost:4050/api" 
+        : "http://13.60.184.247:4050/api";
+
+    static USER_BASE_URL = ApiService.isLocalhost() 
+        ? "http://localhost:4070/api" 
+        : "http://13.60.184.247:4070/api";
+
+    static ROOM_BASE_URL = ApiService.isLocalhost() 
+        ? "http://localhost:4060/api" 
+        : "http://13.60.184.247:4060/api";
 
     // static BASE_URL = "http://ec2-13-49-78-134.eu-north-1.compute.amazonaws.com/api"
 

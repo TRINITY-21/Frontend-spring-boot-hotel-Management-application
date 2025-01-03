@@ -1,6 +1,0 @@
-version: '3'
-services:
-  client:
-    image: trinity505/hotel-frontend:1.0.1
-    ports:
-      - "7070:7070"
